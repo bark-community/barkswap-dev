@@ -1,8 +1,13 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Wallet from "../swap/Wallet/Wallet";
+import dynamic from "next/dynamic";
 import styles from "./navbar.module.css";
+
+// Dynamically import the wallet button to avoid hydration issues
+const WalletDynamic = dynamic(() => import("../swap/Wallet/Wallet"), {
+  ssr: false,
+});
 
 const Navbar = () => {
   return (
@@ -11,6 +16,7 @@ const Navbar = () => {
         <Link href="/" passHref>
           <a className="flex items-center text-2xl font-bold text-custom-orange">
             <Image src="/barkswap.svg" alt="BarkSwap Logo" width={48} height={48} className="mr-2" />
+            BarkSwap
           </a>
         </Link>
         <ul className="flex items-center space-x-4 text-lg">
@@ -26,7 +32,7 @@ const Navbar = () => {
           </li>
         </ul>
         <div className="flex items-center">
-          <Wallet />
+          <WalletDynamic />
         </div>
       </div>
     </nav>
