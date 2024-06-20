@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Swap from "./components/swap/Swap";
-import NavBar from "./components/Navbar/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 import {
   ConnectionProvider,
   WalletProvider,
@@ -30,7 +30,7 @@ export default function Home() {
       <ConnectionProvider endpoint={endpoint}>
         <WalletProvider wallets={wallets} autoConnect>
           <WalletModalProvider>
-            <NavBar />
+            <Navbar />
             <div className="flex flex-col items-center justify-center min-h-screen py-8">
               <Image
                 src="/powered-by-jupiter.svg"
