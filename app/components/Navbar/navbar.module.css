@@ -1,12 +1,72 @@
-.navbar {
-    background-color: var(--background-color);
+.navBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 24px;
+    background-color: var(--background-start-rgb);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logoContainer {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--foreground-rgb);
+    font-weight: bold;
+    font-size: 24px;
+  }
+  
+  .logo {
+    height: 48px;
+    margin-right: 10px;
+  }
+  
+  .navLinks {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navItem {
+    margin: 0 10px;
   }
   
   .navLink {
-    @apply font-semibold text-gray-800 dark:text-white hover:text-custom-orange transition;
+    text-decoration: none;
+    color: var(--foreground-rgb);
+    font-weight: bold;
+    font-size: 16px;
   }
   
-  .container {
-    @apply flex justify-between items-center;
+  .walletButtonContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .walletButton {
+    font-weight: bold;
+    background-color: var(--foreground-rgb);
+    color: var(--background-start-rgb);
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .navBar {
+      flex-direction: column;
+    }
+  
+    .navLinks {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .navItem {
+      margin: 10px 0;
+    }
+  
+    .walletButtonContainer {
+      margin-top: 10px;
+    }
   }
   

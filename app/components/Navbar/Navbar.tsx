@@ -1,32 +1,30 @@
-import React from "react";
-import Wallet from "../swap/Wallet/Wallet";
+import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import Link from "next/link";
+import styles from "./NavBar.module.css";
 
-const Navbar = () => {
+export function NavBar() {
   return (
-    <nav className="p-4 bg-white dark:bg-dark-bg shadow-md">
-      <div className="container mx-auto flex justify-between items-center">
-        <Link href="/" passHref>
-          <a className="flex items-center text-2xl font-bold text-custom-orange">
-            <img src="/barkswap.svg" alt="BarkSwap Logo" className="h-12 mr-2" />
-          </a>
-        </Link>
-        <ul className="flex items-center space-x-4 text-lg">
-          <li>
-            <Link href="/swap" passHref>
-              <a className="font-semibold text-gray-800 dark:text-white hover:text-custom-orange transition">Swap</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/limit-order" passHref>
-              <a className="font-semibold text-gray-800 dark:text-white hover:text-custom-orange transition">Limit Order</a>
-            </Link>
-          </li>
-        </ul>
-        <Wallet />
-      </div>
+    <nav className="flex items-center justify-between p-3 bg-white shadow-md dark:bg-dark-bg">
+      <Link href="/" passHref>
+        <a className="flex items-center text-lg font-bold text-dark-grey dark:text-light-grey">
+          <img src="/barkswap.svg" alt="BarkSwap Logo" className="h-12 mr-2" />
+        </a>
+      </Link>
+      <ul className="flex space-x-4">
+        <li>
+          <Link href="/" passHref>
+            <a className="text-sm font-semibold text-dark-grey dark:text-light-grey">Home</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/swap" passHref>
+            <a className="text-sm font-semibold text-dark-grey dark:text-light-grey">Swap</a>
+          </Link>
+        </li>
+      </ul>
+      <WalletMultiButton className="font-bold bg-dark-grey text-white dark:bg-light-grey dark:text-dark-bg" />
     </nav>
   );
-};
+}
 
-export default Navbar;
+export default NavBar;
