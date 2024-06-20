@@ -10,6 +10,7 @@ const Navbar = () => {
         <Link href="/" passHref>
           <a className="flex items-center text-2xl font-bold text-custom-orange">
             <Image src="/barkswap.svg" alt="BarkSwap Logo" width={48} height={48} className="mr-2" />
+            BarkSwap
           </a>
         </Link>
         <ul className="flex items-center space-x-4 text-lg">
