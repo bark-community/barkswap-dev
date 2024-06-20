@@ -1,17 +1,20 @@
 module.exports = {
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  darkMode: 'media', // or 'class'
   theme: {
     extend: {
       colors: {
-        foreground: 'rgb(var(--foreground-rgb))',
-        backgroundStart: 'rgb(var(--background-start-rgb))',
-        backgroundEnd: 'rgb(var(--background-end-rgb))',
+        'dark-bg': '#0c0c0c',
+        'dark-bg-secondary': '#2f2f2f',
+        'custom-orange': '#D0BFB4',
+      },
+      fontFamily: {
+        inter: ['Inter', 'sans-serif'],
       },
     },
+  },
+  variants: {
+    extend: {},
   },
   plugins: [],
 };
