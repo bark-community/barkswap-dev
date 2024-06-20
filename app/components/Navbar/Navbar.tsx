@@ -18,19 +18,21 @@ const Navbar = () => {
             <Image src="/barkswap.svg" alt="BarkSwap Logo" width={120} height={80} className="mr-2" />
           </a>
         </Link>
-        <ul className="flex items-center space-x-4 text-lg mx-auto">
-          <li>
-            <Link href="/swap" passHref>
-              <a className={styles.navLink}>Swap</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/limit-order" passHref>
-              <a className={styles.navLink}>Limit Order</a>
-            </Link>
-          </li>
-        </ul>
-        <div className="flex items-center ml-auto">
+        <div className="flex-1 flex justify-center">
+          <ul className="flex items-center space-x-4 text-lg">
+            <li>
+              <Link href="/swap" passHref>
+                <a className={styles.navLink}>Swap</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/limit-order" passHref>
+                <a className={styles.navLink}>Limit Order</a>
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div className="ml-auto">
           <WalletDynamic />
         </div>
       </div>
