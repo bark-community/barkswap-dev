@@ -15,11 +15,10 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/" passHref>
           <a className="flex items-center text-2xl font-bold text-custom-orange">
-            <Image src="/barkswap.svg" alt="BarkSwap Logo" width={48} height={48} className="mr-2" />
-            BarkSwap
+            <Image src="/barkswap.svg" alt="BarkSwap Logo" width={120} height={80} className="mr-2" />
           </a>
         </Link>
-        <ul className="flex items-center space-x-4 text-lg">
+        <ul className="flex items-center space-x-4 text-lg mx-auto">
           <li>
             <Link href="/swap" passHref>
               <a className={styles.navLink}>Swap</a>
@@ -31,7 +30,7 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
-        <div className="flex items-center">
+        <div className="flex items-center ml-auto">
           <WalletDynamic />
         </div>
       </div>
