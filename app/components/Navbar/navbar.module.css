@@ -1,0 +1,8 @@
+.navbar {
+    background-color: var(--background-color);
+  }
+  
+  .navLink {
+    @apply font-semibold text-gray-800 dark:text-white hover:text-custom-orange transition;
+  }
+  
