@@ -8,7 +8,7 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/" passHref>
           <a className="flex items-center text-2xl font-bold text-custom-orange">
-            <img src="/barkswap.svg" alt="BarkSwap Logo" className="h-12 mr-2" />
+            <img src="/barkswap.svg" alt="BarkSwap Logo" className="h-10 mr-2" />
           </a>
         </Link>
         <ul className="flex items-center space-x-4 text-lg">
