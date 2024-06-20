@@ -31,12 +31,12 @@ export default function Home() {
         <WalletProvider wallets={wallets} autoConnect>
           <WalletModalProvider>
             <NavBar />
-            <div className="flex flex-col items-center justify-center min-h-screen py-2">
+            <div className="flex flex-col items-center justify-center min-h-screen py-8">
               <Image
-                src="/barkswap.svg"
-                alt="BarkSwap Logo"
-                width={150}
-                height={150}
+                src="/powered-by-jupiter.svg"
+                alt="Jupiter Aggregator Logo"
+                width={40}
+                height={40}
                 className="mb-8"
               />
               <Swap />
