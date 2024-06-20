@@ -26,6 +26,12 @@ body {
   ) rgb(var(--background-start-rgb));
 }
 
+@layer components {
+  .nav-link {
+    @apply font-semibold text-gray-800 dark:text-white hover:text-custom-orange transition;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
