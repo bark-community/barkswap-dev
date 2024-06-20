@@ -4,32 +4,26 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <nav className="bg-white dark:bg-dark-bg shadow-md p-4">
+    <nav className="p-4 bg-white dark:bg-dark-bg shadow-md">
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/" passHref>
           <a className="flex items-center text-2xl font-bold text-custom-orange">
-            <img src="/barkswap.svg" alt="BarkSwap Logo" className="h-8 mr-2" />
+            <img src="/barkswap.svg" alt="BarkSwap Logo" className="h-12 mr-2" />
           </a>
         </Link>
         <ul className="flex items-center space-x-4 text-lg">
           <li>
             <Link href="/swap" passHref>
-              <a className="font-semibold text-gray-800 dark:text-white hover:text-custom-orange transition">
-                Swap
-              </a>
+              <a className="font-semibold text-gray-800 dark:text-white hover:text-custom-orange transition">Swap</a>
             </Link>
           </li>
           <li>
             <Link href="/limit-order" passHref>
-              <a className="font-semibold text-gray-800 dark:text-white hover:text-custom-orange transition">
-                Limit Order
-              </a>
+              <a className="font-semibold text-gray-800 dark:text-white hover:text-custom-orange transition">Limit Order</a>
             </Link>
           </li>
         </ul>
-        <div className="flex items-center">
-          <Wallet />
-        </div>
+        <Wallet />
       </div>
     </nav>
   );
