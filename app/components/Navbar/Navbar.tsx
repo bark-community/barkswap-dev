@@ -11,6 +11,18 @@ const Navbar = () => {
             <img src="/barkswap.svg" alt="BarkSwap Logo" className="h-12 mr-2" />
           </a>
         </Link>
+        <ul className="flex items-center space-x-4 text-lg">
+          <li>
+            <Link href="/swap" passHref>
+              <a className="font-semibold text-gray-800 dark:text-white hover:text-custom-orange transition">Swap</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/limit-order" passHref>
+              <a className="font-semibold text-gray-800 dark:text-white hover:text-custom-orange transition">Limit Order</a>
+            </Link>
+          </li>
+        </ul>
         <Wallet />
       </div>
     </nav>

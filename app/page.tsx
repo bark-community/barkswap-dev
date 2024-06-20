@@ -1,8 +1,7 @@
 "use client";
 import Image from "next/image";
 import Swap from "./components/swap/Swap";
-import Navbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer/Footer";
+import NavBar from "./components/Navbar/Navbar";
 import {
   ConnectionProvider,
   WalletProvider,
@@ -27,12 +26,12 @@ export default function Home() {
   const endpoint = clusterApiUrl(network);
 
   return (
-    <main className="bg-white dark:bg-dark-bg-secondary flex flex-col min-h-screen">
+    <main className="bg-white dark:bg-dark-bg-secondary">
       <ConnectionProvider endpoint={endpoint}>
         <WalletProvider wallets={wallets} autoConnect>
           <WalletModalProvider>
-            <Navbar />
-            <div className="flex-grow flex flex-col items-center justify-center py-8">
+            <NavBar />
+            <div className="flex flex-col items-center justify-center min-h-screen py-8">
               <Image
                 src="/powered-by-jupiter.svg"
                 alt="Jupiter Aggregator Logo"
@@ -42,7 +41,6 @@ export default function Home() {
               />
               <Swap />
             </div>
-            <Footer />
           </WalletModalProvider>
         </WalletProvider>
       </ConnectionProvider>
